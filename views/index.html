@@ -1,0 +1,42 @@
+{{extend './_layouts/home.html'}}
+
+{{block 'title'}}{{'多人社区'}}{{/block}}
+ {{block 'head'}} {{/block}}
+
+{{block 'body'}}
+<section class="container">
+  <div class="header container">
+    <div class="page-header">
+      <h1>Example page header <small>Subtext for header</small></h1>
+      
+    </div>
+  </div>
+  <div class="comments container">
+    <ul class="list-group">
+      {{each comments }}
+       <li class="list-group-item">{{ $value.nickname }}说： {{ $value.message }} <span class="pull-right">{{ $value.data }}</span></li>
+     {{/each}}
+      
+    </ul>
+  </div>
+  <nav aria-label="Page navigation">
+    <ul class="pagination">
+      <li>
+        <a href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+      </li>
+      <li class="active"><a href="#">1</a></li>
+      <li><a href="#">2</a></li>
+      <li><a href="#">3</a></li>
+      <li><a href="#">4</a></li>
+      <li><a href="#">5</a></li>
+      <li>
+        <a href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+      </li>
+    </ul>
+  </nav>
+</section>
+{{/block}}

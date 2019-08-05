@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <!-- 预留给孩子写自己的标题 -->
+  <title>{{block 'title'}}默认标题{{/block}}</title>
+  <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0">
+  <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+  <!-- 预留给孩子使用自己的css样式等 -->
+  {{block 'head'}}{{/block}}
+</head>
+
+<body>
+  {{include '../_partials/header.html'}}
+  <!-- 预留给孩子写自己的内容 -->
+  {{block 'body'}}{{/block}}
+  {{include '../_partials/footer.html'}}
+  <script src="/node_modules/jquery/dist/jquery.js"></script>
+  <script src="/node_modules/bootstrap/dist/js/bootstrap.js"></script>
+  <!-- 预留给孩子使用自己的js -->
+  {{block 'script'}}{{/block}}
+</body>
+
+</html>
